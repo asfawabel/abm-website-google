@@ -1,0 +1,106 @@
+---
+layout: null
+permalink: /blog/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://app.secureprivacy.ai/script/6a749aa631556dd39894ecde.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-43ER4G4BN5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-43ER4G4BN5');
+</script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Blog — ABM Prosta Spółka Akcyjna</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/css/style.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo-wrap">
+    <div class="logo-icon"><span>ABM</span></div>
+    <div class="logo-text">ABM Prosta S.A.
+      <small>Kraków, Poland · Est. 2024</small>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/#research">Research</a></li>
+    <li><a href="/#markets">Markets</a></li>
+    <li><a href="/#team">Team</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <span class="nav-flag">🇵🇱 EU-registered</span>
+    <a href="/#contact" class="nav-cta">Get a Proposal</a>
+  </div>
+</nav>
+
+<div class="section" style="padding-top:8rem">
+  <div class="eyebrow">Insights</div>
+  <h2 class="section-title">The ABM<br/><em>blog archive</em></h2>
+  <div class="blog-grid">
+    {% if site.posts.size == 0 %}
+      <div class="blog-empty">No posts yet — check back soon.</div>
+    {% else %}
+      {% for post in site.posts %}
+      <a class="blog-card" href="{{ post.url | relative_url }}">
+        <div class="blog-date">{{ post.date | date: "%b %-d, %Y" }}</div>
+        <div class="blog-title">{{ post.title }}</div>
+        <div class="blog-excerpt">{{ post.excerpt | strip_html | truncatewords: 22 }}</div>
+      </a>
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo-wrap">
+        <div class="logo-icon"><span>ABM</span></div>
+        <div class="logo-text footer-brand-text">ABM Prosta S.A.
+          <small>Kraków, Poland</small>
+        </div>
+      </div>
+      <p style="margin-top:1rem">International BPO and operational support services, operated from Poland and delivered globally. CIT-compliant. EU-regulated. Results-driven.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul class="footer-links">
+        <li><a href="/#services">B2B Sales & Lead Gen</a></li>
+        <li><a href="/#services">Back-Office Support</a></li>
+        <li><a href="/#services">Market Research</a></li>
+        <li><a href="/#services">Logistics Support</a></li>
+        <li><a href="/#services">SME Operations</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul class="footer-links">
+        <li><a href="/#about">About ABM</a></li>
+        <li><a href="/#markets">Target Markets</a></li>
+        <li><a href="/#research">Market Research</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="mailto:contact@abmpsa.com">contact@abmpsa.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 ABM Prosta Spółka Akcyjna. All rights reserved.</p>
+    <div class="reg">Registered in Poland · Kraków · NIP issued · CIT-compliant</div>
+  </div>
+</footer>
+
+</body>
+</html>
